@@ -6,7 +6,8 @@
  * Time: 22:26
  * To change this template use File | Settings | File Templates.
  */
-namespace Worker;
+namespace Workstation\Entity;
+use Workstation\Worker\AbstractWorker;
 
 class Freelancer extends AbstractWorker
 {

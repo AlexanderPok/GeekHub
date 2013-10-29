@@ -6,7 +6,7 @@
  * Time: 22:21
  * To change this template use File | Settings | File Templates.
  */
-namespace Worker;
+namespace Workstation\Worker;
 
 abstract class AbstractWorker implements WorkableInterface
 {

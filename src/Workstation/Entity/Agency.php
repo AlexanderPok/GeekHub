@@ -6,7 +6,9 @@
  * Time: 22:21
  * To change this template use File | Settings | File Templates.
  */
-namespace Worker;
+namespace Workstation\Entity;
+use Workstation\Worker\WorkableInterface;
+use Workstation\Worker\AbstractWorker;
 
 class Agency implements WorkableInterface
 {

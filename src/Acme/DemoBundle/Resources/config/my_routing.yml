@@ -1,0 +1,13 @@
+response_object:
+    pattern:  /response
+    defaults: { _controller: AcmeDemoBundle:Geekhub:response }
+
+simple_template:
+    pattern:  /simple-template/{var}
+    defaults: { _controller: AcmeDemoBundle:Geekhub:simpleTemplate, var: I am noob  }
+
+template:
+    pattern:  /template/{page}
+    defaults: { _controller: AcmeDemoBundle:Geekhub:template, page: 1 }
+    requirements:
+      page: \d+

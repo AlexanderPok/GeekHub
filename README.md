@@ -1,7 +1,3 @@
-GeekHub HomeWork #4
+GeekHub HomeWork #5
 
-Routes:
-    /response
-    /simple-template/{var}
-    /template/{page}
-Parameters are not required.
+Go to /simple

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <title>Sticky Footer Navbar Template for Bootstrap</title>
+
+    {% stylesheets
+        '@SimpleCleverBundle/Resources/public/css/*'
+        'bundles/twitterbootstrap/css/bootstrap.css'
+        filter='cssrewrite,?yui_css'  %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock head %}
+</head>
+
+<body>
+{% block body %}
+<div id="wrap">
+{% block nav %}
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            {{ render(controller('SimpleCleverBundle:Default:nav', {route: app.request.attributes.get('_route')})) }}
+        </div>
+    </div>
+{% endblock nav %}
+    <div class="container">
+    {% block content %}
+    {% endblock content %}
+    </div>
+</div>
+{% endblock body %}
+{% block footer %}
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>{{ "now"|date("d-m-Y H:i:s") }} poKuz</p>
+    </footer>
+{% endblock footer %}
+{% block before_body_end %}
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    {% javascripts
+        '@TwitterBootstrapBundle/Resources/public/js/bootstrap.js'
+        filter='?yui_js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock before_body_end %}
+</body>
+</html>

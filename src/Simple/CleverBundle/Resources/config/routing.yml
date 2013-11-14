@@ -1,0 +1,11 @@
+simple_clever_homepage:
+    pattern:  /
+    defaults: { _controller: SimpleCleverBundle:Default:index }
+
+simple_clever_about:
+    pattern:  /about
+    defaults: { _controller: SimpleCleverBundle:Default:about }
+
+simple_clever_contact:
+    pattern:  /contact
+    defaults: { _controller: SimpleCleverBundle:Default:contact }

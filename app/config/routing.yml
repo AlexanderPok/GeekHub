@@ -1,0 +1,4 @@
+simple_clever:
+    resource: "@SimpleCleverBundle/Resources/config/routing.yml"
+    prefix:   /simple
+

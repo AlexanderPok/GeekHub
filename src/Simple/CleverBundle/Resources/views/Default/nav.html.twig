@@ -1,0 +1,7 @@
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        {% for navItem in navItems %}
+            <li{% if (route == navItem.route) %} class="active"{% endif %}><a href="{{ path(navItem.route) }}">{{ navItem.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>

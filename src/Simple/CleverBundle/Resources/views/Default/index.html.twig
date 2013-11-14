@@ -1,0 +1,26 @@
+{% extends 'SimpleCleverBundle::layout.html.twig' %}
+{% block body %}
+{{ parent() }}
+    <h1>This is index page!</h1>
+    {% if products|length %}
+        <h2>Products Table</h2>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Price</th>
+                    <th>Qty</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.qty }}</td>
+                <td>{{ product.price * product.qty }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}
